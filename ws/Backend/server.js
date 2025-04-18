@@ -8,7 +8,7 @@ wss.on('connection', (ws) => {
 	console.log('New client connected!');
 
 	ws.send('👋 Welcome to the WebSocket server!');
-
+// event driven listenning for message
 	ws.on('message', (message) => {
 		console.log('Received:', message);
 		ws.send(`You said: ${message}`);
